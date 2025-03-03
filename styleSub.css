@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, #ffffff, #d9eafd);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+header {
+    background: linear-gradient(to left, #ffffff, #d9eafd);
+    position: sticky;
+    padding: 10px 20px;
+    margin-bottom: 3px;
+    z-index: 1000;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  position: sticky;
+  padding: 10px 20px;
+  margin-bottom: 3px;
+  z-index: 1000;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  width: 50px;
+  height: auto;
+  margin-left: 7%;
+}
+
+.navbar-toggler {
+  display: none;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+}
+
+.navbar-toggler i {
+  color: #333;
+}
+
+.navbar-menu {
+  margin-left: auto;
+  margin-right: 7%;
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+}
+
+.navbar-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 7%;
+}
+
+.assignment-info {
+    width: 100%;
+    /* max-width: 1050px; */
+    padding-inline: 7%;
+    color: #333;
+    margin: 40px auto;
+}
+
+.assignment-info div {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.assignment-info div i {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    font-size: 24px;
+    background-color: #A1B8CF;
+    padding: 10px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+main .assignment-info h2 {
+    color: #333333;
+    /* margin-bottom: 10px; */
+    align-items: center;
+    padding: 2px;
+    margin: 0;
+}
+
+main .assignment-info p {
+    color: #666;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+body hr {
+    border: 1px solid #333;
+    padding: 0;
+}
+
+main .assignment-instruction p {
+    color: #666;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    padding-inline: 7%;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100%;
+    background-color: #F8FAFC;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-inline: 7%;
+    padding: 16px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-container .center-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #B2C8DF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    color: #000000;
+}
+
+.card-container .center-button:hover {
+    background-color: #A1B8CF;
+}
+
+.card-content h2 {
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 0;
+    margin-bottom: 32px;
+}
+
+.card-content table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(161, 184, 207. 0.5);
+}
+
+.card-content tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.card-content th,
+.card-content td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid rgb(161, 184, 207, 0.5);
+}
+
+.card-content th {
+    /* background-color: #f8f8f8; */
+    color: #333;
+}
+
+.card-content td {
+    color: #555;
+}
+
+.card-content table .status {
+    background-color: #EFCFCF;
+}
+
+.card-content table a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #FFFFFF, #B2C8DF);
+    padding-top: 50px;
+  }
+  
+  .container-footer {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer {
+    width: 33.3%;
+  }
+  
+  .footer-content {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-content img {
+    max-width: 900px;
+    height: auto;
+  }
+  
+  .footer-content h4 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .footer-content p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .footer-content li {
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 26px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-content a:hover {
+    color: #007bff;
+  }
+  
+  /* Bottom Bar */
+  .bottom-bar {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px 0;
+    background-color: #B2C8DF;
+  }
+  
+  .bottom-bar p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: row;
+      gap: 10px;
+      width: 100%;
+      background-color: #ffffff;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+  
+    /* Menampilkan tombol burger */
+    .navbar-toggler {
+      display: block;
+    }
+  
+    /* Menampilkan menu jika tombol burger diklik */
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-logo {
+      margin-left: 0;
+      width: 40px;
+    }
+  
+    .text-box {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .card-container {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .container-footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .footer-content {
+      margin-bottom: 20px;
+    }
+  
+    .bottom-bar p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-menu {
+      font-size: 14px;
+    }
+  
+    .footer-content a {
+      font-size: 20px;
+    }
+  
+    .bottom-bar p {
+      font-size: 14px;
+    }
+  }

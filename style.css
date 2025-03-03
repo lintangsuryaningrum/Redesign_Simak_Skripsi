@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to left, #FFFFFF, #D9EAFD); 
+  height: 100vh; 
+  width: 100%;
+  margin: 0;
+}
+
+/* Navbar */
+header {
+  background: linear-gradient(to left, #ffffff, #d9eafd);
+  position: sticky;
+  padding: 10px 20px;
+  margin-bottom: 3px;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+position: sticky;
+padding: 10px 20px;
+margin-bottom: 3px;
+z-index: 1000;
+top: 0;
+justify-content: space-between;
+align-items: center;
+display: flex;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+width: 50px;
+height: auto;
+margin-left: 7%;
+}
+
+.navbar-toggler {
+display: none;
+font-size: 24px;
+background: transparent;
+border: none;
+cursor: pointer;
+text-decoration: none;
+padding: 0;
+}
+
+.navbar-toggler i {
+color: #333;
+}
+
+.navbar-menu {
+margin-left: auto;
+margin-right: 7%;
+display: flex;
+gap: 45px;
+list-style: none;
+padding: 0;
+font-size: 16px;
+}
+
+.navbar-toggle-wrapper {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-right: 7%;
+}
+
+/* Text Box */
+.text-box {
+  width: 1050px;
+  padding: 25px;
+  background-color: #F8FAFC;
+  border: 1px solid #ddd;
+  border-radius: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  color: #333; 
+  text-align: center; 
+  margin: 40px auto; 
+}
+
+.text-box p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+/* Cards */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.card {
+  width: 325px;
+  background-color: #F8FAFC;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  margin: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h5 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card-content h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.card-content .center-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #B2C8DF;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 16px;
+  color: #000000;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #FFFFFF, #B2C8DF);
+  padding-top: 50px;
+}
+
+.container-footer {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  width: 33.3%;
+}
+
+.footer-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-content img {
+  max-width: 900px;
+  height: auto;
+}
+
+.footer-content h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.footer-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.footer-content li {
+  list-style: none;
+  margin-right: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: #333;
+  font-size: 26px;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #007bff;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px 0;
+  background-color: #B2C8DF;
+}
+
+.bottom-bar p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Menampilkan tombol burger */
+  .navbar-toggler {
+    display: block;
+  }
+
+  /* Menampilkan menu jika tombol burger diklik */
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-logo {
+    margin-left: 0;
+    width: 40px;
+  }
+
+  .text-box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-content {
+    margin-bottom: 20px;
+  }
+
+  .bottom-bar p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-menu {
+    font-size: 14px;
+  }
+
+  .footer-content a {
+    font-size: 20px;
+  }
+
+  .bottom-bar p {
+    font-size: 14px;
+  }
+}

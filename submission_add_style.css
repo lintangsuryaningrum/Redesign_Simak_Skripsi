@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, #ffffff, #d9eafd);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    padding: 10px 20px;
+    margin-bottom: 3px;
+    z-index: 1000;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+    width: 50px;
+    height: auto;
+    margin-left: 7%;
+}
+
+.navbar-menu {
+    margin-left: auto;
+    margin-right: 7%;
+    display: flex;
+    gap: 45px;
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.assignment-info {
+    width: 100%;
+    /* max-width: 1050px; */
+    padding-inline: 7%;
+    color: #333;
+    margin: 40px auto;
+}
+
+.assignment-info div {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.assignment-info div i {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    font-size: 24px;
+    background-color: #A1B8CF;
+    padding: 10px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+main .assignment-info h2 {
+    color: #333333;
+    width: auto;
+    align-items: center;
+    padding: 2px;
+    margin: 0;
+}
+
+main .assignment-info p {
+    color: #666;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+body hr {
+    border: 1px solid #333;
+    padding: 0;
+}
+
+main .assignment-instruction p {
+    color: #666;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    padding-inline: 7%;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100%;
+    background-color: #F8FAFC;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-inline: 7%;
+    padding: 16px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 16px;
+}
+
+.card-content-prop {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 20%;
+}
+
+.card-content-prop-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #A1B8CF;
+    text-decoration: none;
+}
+
+.card-content-prop-top div a {
+    color: #A1B8CF;
+    text-decoration: none;
+}
+
+.file-submission {
+    width: 100%;
+    border: 2px dashed #A1B8CF;
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.file-upload-label {
+    display: inline-block;
+    cursor: pointer;
+    color: #A1B8CF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.file-upload-label i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.file-upload-input {
+    display: none;
+}
+
+
+
+/* List container */
+#file-list {
+    margin-top: 10px;
+    padding: 0;
+    list-style-type: none;
+    /* Menghilangkan bullet points dari <ul> */
+}
+
+/* Gaya untuk setiap item dalam file list */
+#file-list li {
+    display: flex;
+    /* Menyusun elemen secara horizontal */
+    align-items: center;
+    /* Menjaga teks tetap sejajar secara vertikal */
+    padding: 8px 12px;
+    /* Padding untuk memberi ruang di sekitar teks */
+    background-color: #f9f9f9;
+    /* Warna latar belakang item */
+    border: 1px solid #ddd;
+    /* Memberikan border tipis */
+    border-radius: 5px;
+    /* Membuat sudut melengkung */
+    margin-bottom: 5px;
+    /* Jarak antar item */
+    font-size: 14px;
+    /* Ukuran teks */
+    color: #333;
+    /* Warna teks */
+    transition: background-color 0.3s;
+    /* Efek transisi saat hover */
+}
+
+/* Efek hover ketika item diklik atau diarahkan */
+#file-list li:hover {
+    background-color: #e0e0e0;
+    /* Ganti background saat hover */
+    cursor: pointer;
+}
+
+/* Jika ada ikon atau gambar sebelum nama file */
+#file-list li::before {
+    content: "\f15b";
+    /* FontAwesome icon (ikon file) */
+    font-family: "Font Awesome 5 Free";
+    /* FontAwesome untuk ikon */
+    font-weight: 900;
+    /* Membuat ikon tebal */
+    margin-right: 10px;
+    /* Jarak antara ikon dan nama file */
+    color: #007bff;
+    /* Warna ikon */
+}
+
+/* Gaya untuk teks file yang diupload */
+#file-list li span {
+    font-weight: bold;
+    /* Menebalkan teks nama file */
+}
+
+/* Menambahkan gaya pada elemen p di dalam file list */
+#file-list p {
+    margin: 5px 0;
+    color: #888;
+    /* Memberikan warna abu-abu pada teks tambahan */
+}
+
+
+p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.buttons {
+    padding-left: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.save-changes,
+.cancel {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.save-changes {
+    background-color: #4CAF50;
+    ;
+    color: white;
+}
+
+.save-changes:hover {
+    background-color: #45a049;
+}
+
+.cancel {
+    background-color: #e20046;
+    color: white;
+}
+
+.cancel:hover {
+    background-color: #c10039;
+}
+
+/* File Input*/
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 70%;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    padding: 0;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content-file {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-content-file a {
+    text-decoration: none;
+    font-size: large;
+}
+
+form {
+    padding-left: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    border-color: rgba(0, 0, 0, 0.1);
+    /* 25px top, 10px right, 4px bottom and 35px left */
+}
+
+label {
+    font-size: large;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #FFFFFF, #B2C8DF);
+    padding-top: 50px;
+  }
+  
+  .container-footer {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer {
+    width: 33.3%;
+  }
+  
+  .footer-content {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-content img {
+    max-width: 900px;
+    height: auto;
+  }
+  
+  .footer-content h4 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .footer-content p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .footer-content li {
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 26px;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-content a:hover {
+    color: #007bff;
+  }
+  
+  /* Bottom Bar */
+  .bottom-bar {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px 0;
+    background-color: #B2C8DF;
+  }
+  
+  .bottom-bar p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .navbar-logo {
+      margin-left: 0;
+      width: 40px;
+    }
+  
+    .text-box {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .card-container {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .container-footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .footer-content {
+      margin-bottom: 20px;
+    }
+  
+    .bottom-bar p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-menu {
+      font-size: 14px;
+    }
+  
+    .footer-content a {
+      font-size: 20px;
+    }
+  
+    .bottom-bar p {
+      font-size: 14px;
+    }
+  }

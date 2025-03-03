@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styleslogin.css" />
+  </head>
+  <body>
+    <div class="left-section">
+      <img src="image/logo.webp" alt="Simak Learnhub Logo" class="logo" />
+      <h1>Selamat Datang,</h1>
+      <h2>Silahkan Masukkan Akun Anda!</h2>
+    </div>
+    <div class="right-section">
+      <div class="login-box">
+        <form id="login">
+          <input type="text" id="name" name="nama" placeholder="Username" class="input-field" required />
+          <input type="password" id="password" name="password" placeholder="Password" class="input-field" required />
+          <a href="lupasandi.html" class="forgot-password">Lupa Kata Sandi?</a>
+          <button type="submit" class="login-button">Login</button>
+        </form>
+        <p class="register-link">Don't have an account? <a href="register.html">Register</a></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // Ambil elemen form login
+      const loginForm = document.getElementById('login');
+      const usernameInput = document.getElementById('name');
+      const passwordInput = document.getElementById('password');
+
+      // Menangani pengiriman form
+      loginForm.addEventListener('submit', function (event) {
+          event.preventDefault(); // Mencegah form submit default
+
+          // Ambil nilai username dan password
+          const username = usernameInput.value.trim();
+          const password = passwordInput.value.trim();
+
+          // Validasi input login
+          if (username === "" || password === "") {
+              alert("Username atau Password tidak boleh kosong!");
+          } else {
+              // Cek kredensial atau lakukan proses login lebih lanjut
+              alert("Login berhasil!");
+              // Arahkan ke halaman dashboard atau halaman utama setelah login
+              window.location.href = "index.html"; // Ganti dengan halaman yang sesuai
+          }
+      });
+  </script>
+  </body>
+</html>

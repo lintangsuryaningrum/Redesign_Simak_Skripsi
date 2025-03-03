@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link rel="stylesheet" href="stylesregister.css" />
+</head>
+
+<body>
+    <div class="left-section">
+        <img src="image/logo.webp" alt="Simak Learnhub Logo" class="logo" />
+        <h1>Selamat Datang,</h1>
+        <h2>Silahkan Masukkan Akun Anda!</h2>
+    </div>
+    <div class="right-section">
+        <div class="register-box">
+            <form id="register">
+                <input type="text" id="name" name="nama" placeholder="Nama Lengkap" class="input-field" required />
+                <input type="email" id="email" name="email" placeholder="Email" class="input-field" required />
+                <input type="tel" id="phone" name="phone" placeholder="+62" class="input-field" required />
+                <input type="password" id="password" placeholder="Password" class="input-field" required />
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Ulang Kata Sandi"
+                    class="input-field" required />
+                <button type="submit" class="register-button">Register</button>
+            </form>
+
+            <p class="login-link">Sudah Punya Akun?<a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+<script>
+        // Ambil elemen form dan input
+        const registerForm = document.getElementById('register');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+
+        // Fungsi validasi untuk nama
+        function validateName(name) {
+            return name.length >= 3;
+        }
+
+        // Fungsi validasi untuk email
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return re.test(email);
+        }
+
+        // Fungsi validasi untuk nomor telepon
+        function validatePhone(phone) {
+            const re = /^\+62\d{9,}$/; // Memastikan nomor dimulai dengan +62 dan memiliki setidaknya 10 digit
+            return re.test(phone);
+        }
+
+        // Fungsi validasi untuk password
+        function validatePassword(password) {
+            return password.length >= 6;
+        }
+
+        // Menangani pengiriman form
+        registerForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Ambil nilai input
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const password = passwordInput.value.trim();
+            const confirmPassword = confirmPasswordInput.value.trim();
+
+            // Validasi input
+            if (!validateName(name)) {
+                alert('Nama harus diisi dan minimal 3 karakter.');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Harap masukkan email yang valid.');
+                return;
+            }
+
+            // if (!validatePhone(phone)) {
+            //     alert('Nomor telepon harus dimulai dengan +62 dan minimal 10 digit.');
+            //     return;
+            // }
+
+            // if (!validatePassword(password)) {
+            //     alert('Kata sandi harus minimal 6 karakter.');
+            //     return;
+            // }
+
+            // if (password !== confirmPassword) {
+            //     alert('Kata sandi dan konfirmasi kata sandi tidak cocok.');
+            //     return;
+            // }
+
+            // Simulasi pendaftaran berhasil
+            alert(` Registrasi berhasil!`);
+            window.location.href = 'login.html';
+
+            // Setelah berhasil, kosongkan form
+            registerForm.reset();
+        });
+    </script>
+</body>
+
+</html>
