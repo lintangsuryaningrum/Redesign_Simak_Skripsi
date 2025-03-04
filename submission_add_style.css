@@ -13,29 +13,63 @@ body {
 }
 
 /* Navbar */
+header {
+  background: linear-gradient(to left, #ffffff, #d9eafd);
+  position: sticky;
+  padding: 10px 20px;
+  margin-bottom: 3px;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .navbar {
-    position: sticky;
-    padding: 10px 20px;
-    margin-bottom: 3px;
-    z-index: 1000;
-    top: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+position: sticky;
+padding: 10px 20px;
+margin-bottom: 3px;
+z-index: 1000;
+top: 0;
+justify-content: space-between;
+align-items: center;
+display: flex;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-logo {
-    width: 50px;
-    height: auto;
-    margin-left: 7%;
+width: 50px;
+height: auto;
+margin-left: 7%;
+}
+
+.navbar-toggler {
+display: none;
+font-size: 24px;
+background: transparent;
+border: none;
+cursor: pointer;
+text-decoration: none;
+padding: 0;
+}
+
+.navbar-toggler i {
+color: #333;
 }
 
 .navbar-menu {
-    margin-left: auto;
-    margin-right: 7%;
-    display: flex;
-    gap: 45px;
-    list-style: none;
-    padding: 0;
-    font-size: 16px;
+margin-left: auto;
+margin-right: 7%;
+display: flex;
+gap: 45px;
+list-style: none;
+padding: 0;
+font-size: 16px;
+}
+
+.navbar-toggle-wrapper {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-right: 7%;
 }
 
 .assignment-info {
@@ -429,12 +463,30 @@ footer {
     margin-top: 10px;
   }
   
-  /* Media Queries */
-  @media (max-width: 768px) {
+   /* Media Queries */
+   @media (max-width: 768px) {
     .navbar-menu {
+      display: none;
+      flex-direction: row;
+      gap: 10px;
+      width: 100%;
+      background-color: #ffffff;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+  
+    /* Menampilkan tombol burger */
+    .navbar-toggler {
       display: block;
-      text-align: center;
-      margin-top: 10px;
+    }
+  
+    /* Menampilkan menu jika tombol burger diklik */
+    .navbar-menu.active {
+      display: flex;
     }
   
     .navbar-logo {
