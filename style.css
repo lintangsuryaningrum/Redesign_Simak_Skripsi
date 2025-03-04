@@ -19,7 +19,7 @@ header {
   margin-bottom: 3px;
   z-index: 1000;
   top: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -31,7 +31,7 @@ top: 0;
 justify-content: space-between;
 align-items: center;
 display: flex;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-logo {
@@ -71,6 +71,50 @@ justify-content: space-between;
 margin-right: 7%;
 }
 
+/* Carousel */
+.carousel {
+  display: flex;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 0.5rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  margin: auto;
+  width: 100%;
+  max-width: 1050px;
+}
+
+
+.carousel ::-webkit-scrollbar {
+  display: none;
+}
+
+.card-crou {
+  flex: 0 0 100%;
+  display: flex;
+  scroll-snap-align: start;
+  min-height: 150px;
+  min-width: 200px;
+  align-items: center;
+  justify-content: center;
+  width: 300px; /* Lebih lebar */
+  background-color: #F8FAFC;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  margin-top: 2%;
+}
+
+.card-crou img {
+  width: 100%;
+  height: 100%; /* Sesuaikan tinggi gambar agar penuh */
+  object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+  border-radius: 8px;
+}
+
+
 /* Text Box */
 .text-box {
   width: 1050px;
@@ -96,6 +140,7 @@ margin-right: 7%;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 100px;
+  margin-top: 4%;
 }
 
 .card {
@@ -104,7 +149,7 @@ margin-right: 7%;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-  margin: 20px;
+  margin: 15px;
 }
 
 .card img {
@@ -241,7 +286,6 @@ footer {
     margin-left: 0;
     width: 40px;
   }
-
   .text-box {
     width: 90%;
     padding: 15px;
@@ -281,6 +325,14 @@ footer {
     font-size: 14px;
   }
 
+  .container {
+    width: 100%;
+}
+
+/* .prev, .next {
+    padding: 6px;
+    font-size: 14px;
+} */
   .footer-content a {
     font-size: 20px;
   }
