@@ -19,13 +19,12 @@
           <a class="navbar-brand" href="#"></a>
         </div>
         <div class="navbar-logo">
-          <img src="image/logo.webp" alt="Logo" />
+          <img src="image/logosimak2.png" alt="Logo" />
         </div>
         <ul class="navbar-menu">
           <li><a href="#beranda">Beranda</a></li>
           <li><a href="#kelas">Kelas</a></li>
           <li><a href="#webinar">Webinar</a></li>
-          <li><a href="#">Profile</a></li>
         </ul>
         <a href="javascript:void(0);" class="navbar-toggler">
           <i class="fa fa-bars" aria-hidden="true"></i>
@@ -34,7 +33,7 @@
     </header>
     <!-- navigasi -->
     <main>
-      <div class="carousel">
+      <div id="beranda" class="carousel">
         <div class="card-crou">
           <img src="image/slide1.webp" alt="Slide1">
         </div>
@@ -160,7 +159,7 @@
     <footer>
       <div class="container-footer">
         <div class="footer-content">
-          <img src="image/logo.webp" alt="Logo">
+          <img src="image/logosimak2.png" alt="Logo">
         </div>
         <div class="footer-content">
           <h4>Address</h4>
@@ -221,6 +220,7 @@
 
     <!-- bootstrapjs -->
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
       // Ambil elemen navbar-toggler dan navbar-menu
       const navbarToggler = document.querySelector('.navbar-toggler');
       const navbarMenu = document.querySelector('.navbar-menu');
@@ -230,7 +230,32 @@
         // Menambah atau menghapus class "active" pada navbar-menu
         navbarMenu.classList.toggle('active');
       });
-  
+    });
+
+    // Carousel
+    document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector(".carousel"); // Ambil elemen carousel
+  let scrollAmount = 0; // Posisi scroll awal
+  const slideWidth = 300; // Sesuaikan dengan lebar kartu (sesuai CSS)
+  const scrollSpeed = 1000; // Waktu perpindahan (ms)
+
+  function autoScrollCarousel() {
+    if (carousel) {
+      scrollAmount += slideWidth + 10; // Geser sesuai lebar kartu + margin
+      if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+        scrollAmount = 0; // Kembali ke awal saat mencapai akhir
+      }
+      carousel.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth", // Efek smooth
+      });
+    }
+  }
+
+  // Set interval untuk geser otomatis
+  setInterval(autoScrollCarousel, scrollSpeed);
+});
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

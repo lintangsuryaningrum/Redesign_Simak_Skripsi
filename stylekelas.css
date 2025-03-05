@@ -231,21 +231,22 @@ footer {
 @media (max-width: 768px) {
   .navbar-menu {
     display: none;
-    flex-direction: row;
-    gap: 10px;
-    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    width: 90%;
     background-color: #ffffff;
     position: absolute;
     top: 70px;
     right: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    flex-wrap: wrap;
+    list-style: none;
   }
 
   /* Menampilkan tombol burger */
   .navbar-toggler {
-    display: block;
+    display: flex;
     margin-right: -10px;
   }
 
@@ -254,11 +255,29 @@ footer {
     display: flex;
   }
 
+  .navbar-menu li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Garis pemisah antar menu */
+  }
+  
+  .navbar-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block; /* Agar full width */
+  }
+  
+  .navbar-menu li a:hover {
+    background-color: #f0f0f0; /* Efek hover */
+  }
+
   .navbar-logo {
     margin-left: 0;
     width: 40px;
   }
-
   .text-box {
     width: 90%;
     padding: 15px;
@@ -282,9 +301,10 @@ footer {
   .footer {
     width: 100%;
     margin-bottom: 20px;
+    text-align: center;
   }
 
-  .footer-content {
+  .footer-content a {
     margin-bottom: 20px;
   }
 
